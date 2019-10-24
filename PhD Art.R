@@ -9,6 +9,7 @@ library(ggforce)
 df = read_excel('/Users/smueller/Desktop/2016-2017 ACRE Era Master Data.xlsx') %>% drop_na('R6Lodge')
 
 pick_column <- function() {
+  
   # set.seed(seed)
   # col_nums <- list()
   # for (i in length(values))
