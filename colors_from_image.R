@@ -1,6 +1,7 @@
 #https://chichacha.netlify.com/2019/01/19/extracting-colours-from-your-images-with-image-quantization/
 
 library(tidyverse) ## I love ggplot and tidy data.... so this is a must for anything. 
+library(dplyr)
 library(magick) ## Hello magick!!! 
 library(scales) ## I find rescale function so useful!  and i love show_col function :)
 library(imager) ## i don't know how else to convert image to data frame at the moment. 
@@ -11,13 +12,13 @@ library(imager) ## i don't know how else to convert image to data frame at the m
 im <- image_read("/Users/Sarah/Documents/IMG-1790_small.jpg") %>% image_contrast() #image_equalize()
 
 ## now display image with 500px wide
-im %>% image_resize("500")
+# im %>% image_resize("500")
 
-im %>%
-  image_resize("500") %>%
-  image_quantize(max=20)
-
-im %>% image_resize("500") %>% image_contrast(sharpen=1)
+# im %>%
+#   image_resize("500") %>%
+#   image_quantize(max=20)
+# 
+# im %>% image_resize("500") %>% image_contrast(sharpen=1)
 
 
 ## Function to get n number of colours out of your image. (optionally you can specify different colour space)
